@@ -19,8 +19,4 @@ public class RequestBody {
     private String phone_number;
     private String address;
 
-
-
-    //Create a seller
-
 }

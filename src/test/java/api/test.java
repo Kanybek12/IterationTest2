@@ -49,7 +49,7 @@ public class test {
 
         Assert.assertFalse(expectedEmail.isEmpty());
         Assert.assertTrue(expectedEmail.endsWith(".com"));
-        //   Assert.assertTrue(expectedEmail.length() > 0);
+        Assert.assertTrue(expectedEmail.length() > 0);
         //       String ExpectedEmail = "Jonnycash@test.com";
         //       Assert.assertEquals(response.jsonPath().getString("email").equals(ExpectedEmail);
 

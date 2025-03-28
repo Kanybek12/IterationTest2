@@ -13,5 +13,4 @@ public class RequestBodyCreateNewProducts {
     public Integer category_id;
     public String product_description;
 
-
 }

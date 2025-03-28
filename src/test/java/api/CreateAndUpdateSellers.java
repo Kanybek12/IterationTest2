@@ -12,13 +12,13 @@ import org.junit.Assert;
 import org.junit.Test;
 import utilities.CashWiseToken;
 import utilities.Config;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class CreateAndUpdateSellers {
 
+    //Create 5 sellers
     @Test
     public void CreateSellers() {
         String url = Config.getProperty("url") + "/api/myaccount/sellers";
@@ -56,7 +56,6 @@ public class CreateAndUpdateSellers {
         CustomResponse customResponse = mapper.readValue(response.asString(), CustomResponse.class);
         List<Integer> sellerIds = new ArrayList<>();
         System.out.println(customResponse.getResponses().get(0).getSeller_id());
-//        Response response1 = RestAssured.given().auth().oauth2(token).params(params).get(url);
 
         for (int i = 0; i < customResponse.getResponses().size(); i++) {
             sellerIds.add(customResponse.getResponses().get(i).getSeller_id());
