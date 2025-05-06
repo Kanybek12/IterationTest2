@@ -41,6 +41,7 @@ public class CreateAndUpdateSellers {
         }
     }
 
+    //Get all sellers IDs
     @Test
     public void GetAllSellersIds() throws JsonProcessingException {
         String url = Config.getProperty("url") + "/api/myaccount/sellers";
@@ -146,6 +147,17 @@ public class CreateAndUpdateSellers {
 
         Response response = RestAssured.given().auth().oauth2(token).delete(url);
         System.out.println(response.statusCode());
+    }
+
+    //test get info from single record
+    @Test
+
+    public void GetSingleInfoById() {
+        String url = Config.getProperty("url") + "/api/myaccount/sellers/" + 5492;
+        String token = CashWiseToken.GetToken();
+
+        Response response = RestAssured.given().auth().oauth2(token).get(url);
+        System.out.println(response.prettyPrint());
     }
 
 }
